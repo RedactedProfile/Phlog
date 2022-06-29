@@ -8,9 +8,15 @@ if(!$matched_route) {
     die();
 }
 
+require_once __DIR__ . '/../src/Controllers/HomeController.php';
+require_once __DIR__ . '/../src/Controllers/PostController.php';
 
+//$controller = new $matched_route['controller']();
+call_user_func_array($matched_route['controller'].'::'.$matched_route['action'], $matched_route['parameters']);
 
-echo "<pre>";
-var_dump($matched_route);
-var_dump(Helpers\Request::Get());
+//echo "<pre>";
+//var_dump($controller);
+////var_dump(Helpers\Request::Get());
+//die();
+
 die();
