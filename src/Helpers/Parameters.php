@@ -37,6 +37,10 @@ class Parameters
         return new Parameters($this->data[$element]);
     }
 
+    public function getRaw($element) {
+        return $this->data[$element];
+    }
+
     public function getString($element, $default = '') {
         return (string)$this->get($element, FILTER_SANITIZE_STRING, $default);
     }
