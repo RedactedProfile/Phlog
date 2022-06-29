@@ -55,4 +55,14 @@ class Parameters
     {
         return (array)$this->get($element, null, new Parameters());
     }
+
+    public function getBool($element)
+    {
+        return (bool)$this->get($element, null, '');
+    }
+
+    public function getEmail($element, $default)
+    {
+        return (string)$this->get($element, FILTER_SANITIZE_EMAIL, $default);
+    }
 }
