@@ -12,8 +12,7 @@ class Config
 
     public function load()
     {
-        $data = file_get_contents( __DIR__ . '/../../config.json');
-        $this->config = new Parameters(json_decode($data, true));
+        $this->config = new Parameters( require(__DIR__ . '/../../config.php') );
     }
 
     public static function Get()
