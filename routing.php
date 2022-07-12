@@ -8,6 +8,10 @@ $routes = [
     'post_view' => [
         'route' => '/post/:id',
         'controller' => '\Controllers\PostController::index'
+    ],
+    'about' => [
+        'route' => '/about',
+        'controller' => '\Controllers\HomeController::about'
     ]
 ];
 

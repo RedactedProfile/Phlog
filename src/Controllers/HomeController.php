@@ -18,4 +18,8 @@ class HomeController extends BaseController
         ]);
     }
 
+    public function about()
+    {
+        return $this->render('about');
+    }
 }
