@@ -1,5 +1,10 @@
 <?php
 
+// return whatever asset so long as we're not on this front controller
+if($_SERVER['SCRIPT_NAME'] !== '/index.php') {
+    return false;
+}
+
 require_once __DIR__ . '/../src/bootstrap.php';
 
 $matched_route = Helpers\Router::Get()->match(Helpers\Request::Get()->getServer()->getString('PATH_INFO'));
