@@ -11,12 +11,12 @@ if(!$matched_route) {
 require_once __DIR__ . '/../src/Controllers/HomeController.php';
 require_once __DIR__ . '/../src/Controllers/PostController.php';
 
-//$controller = new $matched_route['controller']();
-call_user_func_array($matched_route['controller'].'::'.$matched_route['action'], $matched_route['parameters']);
+$controller = new $matched_route['controller']();
+$response = call_user_func_array([$controller, $matched_route['action']], $matched_route['parameters']);
 
-//echo "<pre>";
-//var_dump($controller);
-////var_dump(Helpers\Request::Get());
-//die();
+ob_start();
 
+echo $response->body;
+
+ob_end_flush();
 die();
