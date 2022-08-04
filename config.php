@@ -11,7 +11,7 @@ $config = [
     ],
 
     // Route Module
-    'routes' => require __DIR__ . '/routing.php',
+    'routes' => require __DIR__ . '/src/App/routing.php',
 
     // Logging Module
     'logging' => [
