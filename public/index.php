@@ -13,8 +13,9 @@ if(!$matched_route) {
     die();
 }
 
-require_once __DIR__ . '/../src/Controllers/HomeController.php';
-require_once __DIR__ . '/../src/Controllers/PostController.php';
+
+require_once __DIR__ . '/../src/App/Controllers/HomeController.php';
+require_once __DIR__ . '/../src/App/Controllers/PostController.php';
 
 $controller = new $matched_route['controller']();
 $response = call_user_func_array([$controller, $matched_route['action']], $matched_route['parameters']);
