@@ -8,16 +8,17 @@ use Core\Http\Response;
 
 class BaseController
 {
-    public function render($view, $data = [], $code = 200, $headers = []) {
+    public function render($view, $data = [], $code = 200, $headers = []): Response {
         $response = new Response();
         $response->code = $code;
         $response->headers = $headers;
         $response->body = '';
 
-        if(file_exists(__DIR__ . "/../Views/{$view}.php")) {
+        $view = __DIR__ . "/../App/Views/{$view}.php";
+        if(file_exists($view)) {
             ob_start();
             extract($data, EXTR_OVERWRITE);
-            require __DIR__ . "/../Views/{$view}.php";
+            require $view;
             $response->body = ob_get_clean();
         }
 

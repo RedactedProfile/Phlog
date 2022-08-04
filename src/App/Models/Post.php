@@ -1,8 +1,8 @@
 <?php
 
-namespace Models;
+namespace App\Models;
 
-require_once __DIR__ . '/../Core/Parameters.php';
+require_once __DIR__ . '/../../Core/Parameters.php';
 
 use Core\Parameters;
 

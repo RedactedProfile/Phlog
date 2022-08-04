@@ -3,15 +3,15 @@
 $routes = [
     'index' => [
         'route' => '',
-        'controller' => '\Controllers\HomeController::index'
+        'controller' => 'App\Controllers\HomeController::index'
     ],
     'post_view' => [
         'route' => '/post/:id',
-        'controller' => '\Controllers\PostController::index'
+        'controller' => 'App\Controllers\PostController::index'
     ],
     'about' => [
         'route' => '/about',
-        'controller' => '\Controllers\HomeController::about'
+        'controller' => 'App\Controllers\HomeController::about'
     ]
 ];
 
