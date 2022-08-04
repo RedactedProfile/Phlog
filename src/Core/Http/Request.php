@@ -1,8 +1,10 @@
 <?php
 
-namespace Helpers;
+namespace Core\Http;
 
-require_once 'Parameters.php';
+use Core\Parameters;
+
+require_once __DIR__ . '/../Parameters.php';
 
 class Request
 {

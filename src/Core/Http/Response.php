@@ -1,6 +1,6 @@
 <?php
 
-namespace Helpers;
+namespace Core\Http;
 
 class Response
 {

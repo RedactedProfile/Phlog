@@ -2,9 +2,9 @@
 
 namespace Controllers;
 
-use Helpers\BaseController;
+use Core\BaseController;
 
-require_once __DIR__ . '/../Helpers/BaseController.php';
+require_once __DIR__ . '/../Core/BaseController.php';
 require_once __DIR__ . '/../Repositories/PostRepository.php';
 
 class PostController extends BaseController
