@@ -2,10 +2,10 @@
 
 namespace Repositories;
 
-use Helpers\Database;
+use Core\Database\DBAL\Database;
 use Models\Post;
 
-require_once __DIR__ . '/../Helpers/Database.php';
+require_once __DIR__ . '/../Core/Database/DBAL/Database.php';
 require_once __DIR__ . '/../Models/Post.php';
 
 class PostRepository

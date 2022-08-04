@@ -2,9 +2,9 @@
 
 namespace Models;
 
-use Helpers\Parameters;
+require_once __DIR__ . '/../Core/Parameters.php';
 
-require_once __DIR__ . '/../Helpers/Parameters.php';
+use Core\Parameters;
 
 class Post
 {

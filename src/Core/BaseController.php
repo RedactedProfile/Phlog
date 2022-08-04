@@ -1,14 +1,13 @@
 <?php
 
-namespace Helpers;
+namespace Core;
 
-require_once __DIR__ . '/../Helpers/Response.php';
+require_once __DIR__ . '/Http/Response.php';
 
-use Helpers\Response;
+use Core\Http\Response;
 
 class BaseController
 {
-
     public function render($view, $data = [], $code = 200, $headers = []) {
         $response = new Response();
         $response->code = $code;
@@ -24,5 +23,4 @@ class BaseController
 
         return $response;
     }
-
 }

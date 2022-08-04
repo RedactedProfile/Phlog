@@ -1,6 +1,7 @@
 <?php
 
 $config = [
+    // Database Module
     "database" => [
             "host" => "localhost",
             "port" => 3306,
@@ -8,7 +9,20 @@ $config = [
         "username" => "root",
         "password" => "toor"
     ],
-    'routes' => require __DIR__ . '/routing.php'
+
+    // Route Module
+    'routes' => require __DIR__ . '/routing.php',
+
+    // Logging Module
+    'logging' => [
+        'outdir' => __DIR__ . '/logs',
+        'channels' => [
+            'main' => [
+                'min_level' => 'info',
+            ]
+        ]
+    ]
+
 ];
 
 return $config;

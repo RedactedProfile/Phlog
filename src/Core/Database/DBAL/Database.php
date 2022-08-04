@@ -1,8 +1,10 @@
 <?php
 
-namespace Helpers;
+namespace Core\Database\DBAL;
 
-require_once 'Config.php';
+require_once __DIR__ . '/../../Config.php';
+
+use Core\Config;
 
 class Database
 {

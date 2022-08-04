@@ -7,7 +7,7 @@ if($_SERVER['SCRIPT_NAME'] !== '/index.php') {
 
 require_once __DIR__ . '/../src/bootstrap.php';
 
-$matched_route = Helpers\Router::Get()->match(Helpers\Request::Get()->getServer()->getString('PATH_INFO'));
+$matched_route = Core\Router\Router::Get()->match(Core\Http\Request::Get()->getServer()->getString('PATH_INFO'));
 if(!$matched_route) {
     echo "404 not found";
     die();

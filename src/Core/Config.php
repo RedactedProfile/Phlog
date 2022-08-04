@@ -1,8 +1,10 @@
 <?php
 
-namespace Helpers;
+namespace Core;
 
-require_once 'Parameters.php';
+require_once __DIR__ . '/Parameters.php';
+
+use Core\Parameters;
 
 class Config
 {
@@ -12,7 +14,7 @@ class Config
 
     public function load()
     {
-        $this->config = new Parameters( require(__DIR__ . '/../../config.php') );
+        $this->config = new Parameters(require(__DIR__ . '/../../config.php'));
     }
 
     public static function Get()
